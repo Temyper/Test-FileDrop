@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: rgb(163, 114, 24);
+}
+
 header {
   display: flex; /* 親要素をFlexboxにする */
   justify-content: center; /* 横を中央揃えにする */
@@ -19,6 +23,7 @@ header {
   justify-content: center; /* 横を中央揃えにする */
   align-items: center; /* 縦を中央揃えにする */
   flex-direction: column;
+  margin: 30px;
 
   #file-dropping__area {
     background-image: url(../resource/FileDroppingArea.png);
@@ -28,6 +33,7 @@ header {
   }
 
   #file-dropping__target {
+    margin: 30px;
     text-align: center;
     background-color: green;
   }

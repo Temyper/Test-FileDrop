@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #a37218;
+}
+
 header {
   display: flex;
   /* 親要素をFlexboxにする */
@@ -26,6 +30,7 @@ header {
   align-items: center;
   /* 縦を中央揃えにする */
   flex-direction: column;
+  margin: 30px;
 }
 #file-dropping #file-dropping__area {
   background-image: url(../resource/FileDroppingArea.png);
@@ -34,6 +39,7 @@ header {
   background-size: cover;
 }
 #file-dropping #file-dropping__target {
+  margin: 30px;
   text-align: center;
   background-color: green;
 }/*# sourceMappingURL=style.css.map */
