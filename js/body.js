@@ -32,8 +32,22 @@ $(function AddEvents() {
     //   console.log(e.dataTransfer.files.length.toString());
 
     files = e.originalEvent.dataTransfer.files;
-    console.log(files.length.toString());
-    $target.text(files[0].name);
+
+    if (files.length <= 0) {
+      console.log("No files.");
+      return;
+    }
+
+    let text = "";
+
+    $.each(files, function (index, file) {
+      text += `${file.name}\n`;
+    });
+
+    // 20210221なぜか改行が反映されない
+    $target.text(text.slice(0, text.length - 1));
+
+    console.log(text.slice(0, text.length - 1));
     console.log("drop");
   });
 });
