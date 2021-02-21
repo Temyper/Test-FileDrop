@@ -4,6 +4,8 @@ const $droppingArea = $("#file-dropping__area");
 
 const $target = $("#file-dropping__target");
 
+let files = "";
+
 const droppingColor = "#ff0000";
 
 const defaultColor = "";
@@ -29,9 +31,9 @@ $(function AddEvents() {
     // if (e.dataTransfer.files.length > 0)
     //   console.log(e.dataTransfer.files.length.toString());
 
-    let files = e.originalEvent.dataTransfer.files;
+    files = e.originalEvent.dataTransfer.files;
     console.log(files.length.toString());
-
+    $target.text(files[0].name);
     console.log("drop");
   });
 });
